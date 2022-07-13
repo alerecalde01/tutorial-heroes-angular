@@ -1,0 +1,11 @@
+<div *ngIf="hero">
+
+    <h2>{{hero.name | uppercase}} Powers</h2>
+    <div>
+      <input *ngIf="vista == 'detail'" type="text" id="hero-powers" [(ngModel)]="hero.power" placeholder="powers">
+      <!-- <label *ngIf="vista == 'list'" type="">{{ hero.power | uppercase }}</label> -->
+      <label *ngIf="vista == 'list'"><span *ngIf="!hero.power">Sin Poderes</span><span *ngIf="hero.power">{{ hero.power  | uppercase }}</span></label>
+    </div>
+  
+</div>
+
